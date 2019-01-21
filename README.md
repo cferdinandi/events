@@ -1,7 +1,7 @@
 # Events [![Build Status](https://travis-ci.org/cferdinandi/events.svg)](https://travis-ci.org/cferdinandi/events)
-A tiny event delegation helper library. [Learn more about why you should use event delegation.](https://gomakethings.com/checking-event-target-selectors-with-event-bubbling-in-vanilla-javascript/)
+A tiny (700kb minified and gzipped) event delegation helper library. [Learn more about why you should use event delegation.](https://gomakethings.com/checking-event-target-selectors-with-event-bubbling-in-vanilla-javascript/)
 
-[View the Demo](https://codepen.io/cferdinandi/pen/wQzrdM)
+[View the Demo](https://codepen.io/cferdinandi/pen/gqYrbe)
 
 
 <hr>
