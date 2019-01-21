@@ -59,7 +59,6 @@
 
 		<!-- Javascript -->
 		<script src="dist/events.polyfills.js"></script>
-		<script src="dist/events.emit.polyfills.js"></script>
 		<script>
 			// Log clicks on elements with the .btn1 class
 			events.on('click', '.btn1', function (event) {
@@ -73,14 +72,9 @@
 			});
 
 			// Listen for all clicks and scrolls
-			events.on('click scroll', window, function (event) {
+			events.on('click, scroll', window, function (event) {
 				// Log the event type and targeted element
 				console.log(event.type, event.target);
-			});
-
-			// Test a custom event
-			events.on('customEventYo', window, function (event) {
-				console.log('Custom event!');
 			});
 		</script>
 

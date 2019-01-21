@@ -72,9 +72,17 @@ if (window.Element && !Element.prototype.closest) {
 	 * @return {Boolean}               If true, run listener
 	 */
 	var doRun = function (target, selector) {
-		if ([window, document, document.documentElement].indexOf(selector) > -1) return true;
+		if ([
+			'*',
+			'window',
+			'document',
+			'document.documentElement',
+			window,
+			document,
+			document.documentElement
+		].indexOf(selector) > -1) return true;
 		if (typeof selector !== 'string' && selector.contains) {
-			return selector.contains(target);
+			return selector === target || selector.contains(target);
 		}
 		return target.closest(selector);
 	};
@@ -93,20 +101,20 @@ if (window.Element && !Element.prototype.closest) {
 
 	/**
 	 * Add an event
-	 * @param  {String}   type     The event type or types (space separated)
+	 * @param  {String}   types    The event type or types (space separated)
 	 * @param  {String}   selector The selector to run the event on
 	 * @param  {Function} callback The function to run when the event fires
 	 */
-	publicAPIs.on = function (type, selector, callback) {
+	publicAPIs.on = function (types, selector, callback) {
 
 		// Make sure there's a selector and callback
 		if (!selector || !callback) return;
 
-		// Get types
-		var types = type.split(' ');
-
 		// Loop through each event type
-		types.forEach((function (type) {
+		types.split(',').forEach((function (type) {
+
+			// Remove whitespace
+			type = type.trim();
 
 			// If no event of this type yet, setup
 			if (!activeEvents[type]) {
@@ -126,17 +134,17 @@ if (window.Element && !Element.prototype.closest) {
 
 	/**
 	 * Remove an event
-	 * @param  {String}   type     The event type or types (space separated)
+	 * @param  {String}   types    The event type or types (space separated)
 	 * @param  {String}   selector The selector to remove the event from
 	 * @param  {Function} callback The function to remove
 	 */
-	publicAPIs.off = function (type, selector, callback) {
-
-		// Get types
-		var types = type.split(' ');
+	publicAPIs.off = function (types, selector, callback) {
 
 		// Loop through each event type
-		types.forEach((function (type) {
+		types.split(',').forEach((function (type) {
+
+			// Remove whitespace
+			type = type.trim();
 
 			// if event type doesn't exist, bail
 			if (!activeEvents[type]) return;
