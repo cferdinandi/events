@@ -3,7 +3,7 @@ A tiny (700kb minified and gzipped) event delegation helper library.
 
 Events lets you setup individual event listeners throughout your code, but runs them all in a single event listener behind-the-scenes. [Learn more about why you should use event delegation.](https://gomakethings.com/checking-event-target-selectors-with-event-bubbling-in-vanilla-javascript/)
 
-[View the Demo](https://codepen.io/cferdinandi/pen/gqYrbe)
+**[View the Demo](https://codepen.io/cferdinandi/pen/gqYrbe)**
 
 
 <hr>
