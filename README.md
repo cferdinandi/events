@@ -108,6 +108,13 @@ events.off('click', '.sandwich', function (event) {
 });
 ```
 
+You can also remove all events of a particular type by passing in just the event type.
+
+```js
+// Remove all click events
+events.off('click');
+```
+
 
 ## Selectors
 
