@@ -115,6 +115,16 @@ You can also remove all events of a particular type by passing in just the event
 events.off('click');
 ```
 
+### `get()`
+
+Get an immutable list of all active event listeners.
+
+Returns an object. Each active event type is a key, with an array of selector/callback objects as its property.
+
+```js
+var activeEvents = events.get();
+```
+
 
 ## Selectors
 

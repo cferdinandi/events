@@ -1,5 +1,5 @@
 /*!
- * events v1.0.0
+ * events v1.1.0
  * A tiny event delegation helper library.
  * (c) 2019 Chris Ferdinandi
  * MIT License
@@ -163,6 +163,20 @@ if (window.Element && !Element.prototype.closest) {
 
 		}));
 
+	};
+
+	/**
+	 * Get an immutable copy of all active event listeners
+	 * @return {Object} Active event listeners
+	 */
+	publicAPIs.get = function () {
+		var obj = {};
+		for (var type in activeEvents) {
+			if (activeEvents.hasOwnProperty(type)) {
+				obj[type] = activeEvents[type];
+			}
+		}
+		return obj;
 	};
 
 

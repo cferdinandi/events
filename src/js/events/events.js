@@ -140,6 +140,20 @@
 
 	};
 
+	/**
+	 * Get an immutable copy of all active event listeners
+	 * @return {Object} Active event listeners
+	 */
+	publicAPIs.get = function () {
+		var obj = {};
+		for (var type in activeEvents) {
+			if (activeEvents.hasOwnProperty(type)) {
+				obj[type] = activeEvents[type];
+			}
+		}
+		return obj;
+	};
+
 
 	//
 	// Return public APIs
