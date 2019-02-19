@@ -1,5 +1,5 @@
 # Events [![Build Status](https://travis-ci.org/cferdinandi/events.svg)](https://travis-ci.org/cferdinandi/events)
-A tiny (700kb minified and gzipped) event delegation helper library.
+A tiny (700 byte minified and gzipped) event delegation helper library.
 
 Events lets you setup individual event listeners throughout your code, but runs them all in a single event listener behind-the-scenes. [Learn more about why you should use event delegation.](https://gomakethings.com/checking-event-target-selectors-with-event-bubbling-in-vanilla-javascript/)
 
