@@ -50,6 +50,14 @@ You can also use the [jsDelivr CDN](https://cdn.jsdelivr.net/gh/cferdinandi/even
 <script src="https://cdn.jsdelivr.net/gh/cferdinandi/events@1.0.0/dist/events.polyfills.min.js"></script>
 ```
 
+**NPM**
+
+You can also use NPM (or your favorite package manager).
+
+```bash
+npm install eventslibjs
+```
+
 
 
 ## API
