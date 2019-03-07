@@ -3,7 +3,9 @@ A tiny (700 byte minified and gzipped) event delegation helper library.
 
 Events lets you setup individual event listeners throughout your code, but runs them all in a single event listener behind-the-scenes. [Learn more about why you should use event delegation.](https://gomakethings.com/checking-event-target-selectors-with-event-bubbling-in-vanilla-javascript/)
 
-**[View the Demo](https://codepen.io/cferdinandi/pen/gqYrbe)**
+**[View the Demo on CodePen &rarr;](https://codepen.io/cferdinandi/pen/gqYrbe)**
+
+[Installation](#installation) | [API](#api) | [Selectors](#selectors) | [Browser Compatibility](#browser-compatibility) | [License](#license)
 
 
 <hr>
@@ -50,7 +52,7 @@ You can also use the [jsDelivr CDN](https://cdn.jsdelivr.net/gh/cferdinandi/even
 
 
 
-## The API
+## API
 
 ### `on()`
 
@@ -153,26 +155,6 @@ You can also pass in a node instead of a selector string.
 var sandwich = document.querySelector('.sandwich');
 events.on('click', sandwich, myCallback);
 ```
-
-
-
-## Working with the Source Files
-
-If you would prefer, you can work with the development code in the `src` directory using the included [Gulp build system](http://gulpjs.com/). This compiles, lints, and minifies code.
-
-### Dependencies
-Make sure these are installed first.
-
-* [Node.js](http://nodejs.org)
-* [Gulp](http://gulpjs.com) `sudo npm install -g gulp`
-
-### Quick Start
-
-1. In bash/terminal/command line, `cd` into your project directory.
-2. Run `npm install` to install required files.
-3. When it's done installing, run one of the task runners to get going:
-	* `gulp` manually compiles files.
-	* `gulp watch` automatically compiles files when changes are made and applies changes using [LiveReload](http://livereload.com/).
 
 
 

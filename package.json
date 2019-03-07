@@ -1,5 +1,5 @@
 {
-	"name": "events",
+	"name": "eventslibjs",
 	"version": "1.1.0",
 	"description": "A tiny event delegation helper library.",
 	"main": "./dist/events.polyfills.min.js",

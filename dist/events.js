@@ -1,5 +1,5 @@
 /*!
- * events v1.1.0
+ * eventslibjs v1.1.0
  * A tiny event delegation helper library.
  * (c) 2019 Chris Ferdinandi
  * MIT License
