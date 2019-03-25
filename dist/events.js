@@ -1,5 +1,5 @@
 /*!
- * eventslibjs v1.1.0
+ * eventslibjs v1.2.0
  * A tiny event delegation helper library.
  * (c) 2019 Chris Ferdinandi
  * MIT License
@@ -146,6 +146,19 @@
 
 		}));
 
+	};
+
+	/**
+	 * Add an event, and automatically remove it after it's first run
+	 * @param  {String}   types    The event type or types (space separated)
+	 * @param  {String}   selector The selector to run the event on
+	 * @param  {Function} callback The function to run when the event fires
+	 */
+	publicAPIs.once = function (types, selector, callback) {
+		publicAPIs.on(types, selector, (function temp (event) {
+			callback(event);
+			publicAPIs.off(types, selector, temp);
+		}));
 	};
 
 	/**

@@ -141,6 +141,19 @@
 	};
 
 	/**
+	 * Add an event, and automatically remove it after it's first run
+	 * @param  {String}   types    The event type or types (space separated)
+	 * @param  {String}   selector The selector to run the event on
+	 * @param  {Function} callback The function to run when the event fires
+	 */
+	publicAPIs.once = function (types, selector, callback) {
+		publicAPIs.on(types, selector, function temp (event) {
+			callback(event);
+			publicAPIs.off(types, selector, temp);
+		});
+	};
+
+	/**
 	 * Get an immutable copy of all active event listeners
 	 * @return {Object} Active event listeners
 	 */

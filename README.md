@@ -125,6 +125,28 @@ You can also remove all events of a particular type by passing in just the event
 events.off('click');
 ```
 
+### `once()`
+
+Run an event callback exactly once and then automatically remove it. Works the same as the `on()` method.
+
+```js
+/**
+ * Add an event, and automatically remove it after it's first run
+ * @param  {String}   types    The event type or types (space separated)
+ * @param  {String}   selector The selector to run the event on
+ * @param  {Function} callback The function to run when the event fires
+ */
+events.once(types, selector, callback);
+```
+
+**Example**
+
+```js
+events.once('click', '.tuna', function (event) {
+	console.log('Tuna sandwich!');
+});
+```
+
 ### `get()`
 
 Get an immutable list of all active event listeners.
