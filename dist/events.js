@@ -84,7 +84,7 @@
 
 	/**
 	 * Add an event
-	 * @param  {String}   types    The event type or types (space separated)
+	 * @param  {String}   types    The event type or types (comma separated)
 	 * @param  {String}   selector The selector to run the event on
 	 * @param  {Function} callback The function to run when the event fires
 	 */
@@ -117,7 +117,7 @@
 
 	/**
 	 * Remove an event
-	 * @param  {String}   types    The event type or types (space separated)
+	 * @param  {String}   types    The event type or types (comma separated)
 	 * @param  {String}   selector The selector to remove the event from
 	 * @param  {Function} callback The function to remove
 	 */
@@ -150,7 +150,7 @@
 
 	/**
 	 * Add an event, and automatically remove it after it's first run
-	 * @param  {String}   types    The event type or types (space separated)
+	 * @param  {String}   types    The event type or types (comma separated)
 	 * @param  {String}   selector The selector to run the event on
 	 * @param  {Function} callback The function to run when the event fires
 	 */
