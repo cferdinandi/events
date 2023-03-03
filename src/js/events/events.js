@@ -124,7 +124,7 @@
 			// if event type doesn't exist, bail
 			if (!activeEvents[type]) return;
 
-			// If it's the last event of it's type, remove entirely
+			// If it's the last event of its type, remove entirely
 			if (activeEvents[type].length < 2 || !selector) {
 				delete activeEvents[type];
 				window.removeEventListener(type, eventHandler, true);
@@ -141,7 +141,7 @@
 	};
 
 	/**
-	 * Add an event, and automatically remove it after it's first run
+	 * Add an event, and automatically remove it after its first run
 	 * @param  {String}   types    The event type or types (comma separated)
 	 * @param  {String}   selector The selector to run the event on
 	 * @param  {Function} callback The function to run when the event fires
